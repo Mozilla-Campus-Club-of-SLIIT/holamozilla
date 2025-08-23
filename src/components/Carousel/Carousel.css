@@ -193,3 +193,43 @@
     height: 6px;
   }
 }
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carousel-multi {
+    flex-direction: column; 
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+  }
+  
+  .carousel-img {
+    width: 300px; 
+    height: 300px;
+    border-radius: 20px;
+  }
+  
+ 
+  .carousel-img:not(.carousel-img-active) {
+    display: none;
+  }
+  
+  .carousel-img-active {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+  }
+  
+  .carousel-status {
+    margin-top: 2rem;
+  }
+  
+  .carousel-status-dots {
+    gap: 0.6rem;
+  }
+  
+  .carousel-status-dot {
+    width: 7px;
+    height: 7px;
+  }
+}
