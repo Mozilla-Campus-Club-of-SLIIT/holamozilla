@@ -1,18 +1,26 @@
+/* Mobile-first responsive header - keeps same structure */
 header {
   position: fixed;
   z-index: 99;
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  padding: 0 10px; /* Add padding for mobile */
+  box-sizing: border-box; 
 
   nav {
     ul {
       list-style-type: none;
-      margin: 25px;
+      margin: 15px 0; 
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: flex-end;
+      align-items: center;
 
       li {
         display: inline;
-        margin: 10px;
+        margin: 5px; 
 
         a,
         a:visited {
@@ -21,6 +29,14 @@ header {
           font-weight: bold;
           position: relative;
           transition: color 0.2s ease;
+          font-size: 0.9rem; 
+          padding: 8px 12px; 
+          border-radius: 4px;
+          white-space: nowrap; 
+        }
+
+        a:hover {
+          background-color: rgba(255, 255, 255, 0.1);
         }
 
         a:hover::after {
@@ -31,6 +47,70 @@ header {
           width: 100%;
           height: 3px;
           background-color: white;
+        }
+      }
+    }
+  }
+}
+
+/* Tablet styles - 768px and up */
+@media (min-width: 768px) {
+  header {
+    padding: 0 20px;
+
+    nav {
+      ul {
+        margin: 20px 0;
+
+        li {
+          margin: 8px;
+
+          a,
+          a:visited {
+            font-size: 1rem;
+            padding: 10px 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Desktop styles - 1024px and up */
+@media (min-width: 1024px) {
+  header {
+    padding: 0;
+
+    nav {
+      ul {
+        margin: 25px;
+
+        li {
+          margin: 10px;
+
+          a,
+          a:visited {
+            font-size: 1.1rem;
+            padding: 12px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large desktop styles - 1200px and up */
+@media (min-width: 1200px) {
+  header {
+    nav {
+      ul {
+        li {
+          margin: 12px;
+
+          a,
+          a:visited {
+            font-size: 1.2rem;
+          }
         }
       }
     }

@@ -96,3 +96,84 @@ p {
   font-size: 1.2rem;
   font-weight: 300;
 }
+
+/* Mobile-first responsive design for About section */
+/* Mobile devices - up to 767px */
+@media (max-width: 767px) {
+  .carousel-section {
+    padding: 0 1rem; /* Add padding to prevent text from touching edges */
+    border-top-right-radius: 200px 60px; /* Reduce border radius for mobile */
+  }
+  
+  .about {
+    font-size: 2rem; /* Reduced from 3rem for mobile */
+    letter-spacing: 1px; /* Reduced letter spacing for mobile */
+    margin-bottom: 1rem; /* Increased margin for better spacing */
+    line-height: 1.2; /* Better line height for readability */
+    text-align: center; /* Ensure centered text */
+    max-width: 90%; /* Constrain width */
+  }
+
+  .about-text {
+    font-size: 1rem; /* Reduced from 1.2rem for mobile */
+    margin: 20px 10px; /* Reduced margin for mobile */
+    line-height: 1.5; /* Better line height for readability */
+    text-align: center; /* Ensure centered text */
+    word-wrap: break-word; /* Allow text to break naturally */
+    hyphens: auto; /* Enable automatic hyphenation */
+    max-width: 90%; /* Limit width to ensure proper wrapping */
+  }
+  
+  /* Tickets section mobile responsive */
+  .tickets {
+    padding: 0 1rem; /* Add padding to prevent content from touching edges */
+    border-top-right-radius: 400px 80px; /* Reduce border radius for mobile */
+  }
+  
+  .ticket-header {
+    font-size: 1.8rem; /* Reduced from 2.5rem for mobile */
+    margin-bottom: 20px; /* Reduced margin for mobile */
+    line-height: 1.2; /* Better line height */
+    text-align: center; /* Ensure centered */
+    max-width: 90%; /* Constrain width */
+  }
+  
+  .tickets p {
+    font-size: 1rem; /* Smaller text for mobile */
+    margin: 10px 0 20px 0; /* Adjust margins */
+    text-align: center;
+    max-width: 90%;
+    line-height: 1.4;
+  }
+  
+  .tickets img {
+    width: 90% !important; /* Make ticket image responsive */
+    max-width: 350px !important; /* Limit maximum width */
+    height: auto !important; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add margin below image */
+  }
+  
+  .ticket-placer-section {
+    flex-direction: column; /* Stack input and button vertically */
+    gap: 10px; /* Add gap between elements */
+    width: 100%; /* Full width container */
+    max-width: 320px; /* Limit max width */
+    align-items: stretch; /* Stretch items to full width */
+  }
+  
+  .ticket-placer-section input[type="text"] {
+    width: 100%; /* Full width input */
+    max-width: none; /* Remove max-width constraint */
+    margin-right: 0; /* Remove right margin */
+    box-sizing: border-box; /* Include padding in width calculation */
+    font-size: 0.95rem; /* Slightly smaller font */
+    padding: 14px 16px; /* Adjust padding for mobile */
+  }
+  
+  .ticket-placer-section button {
+    width: 100%; /* Full width button */
+    padding: 14px 20px; /* Adjust padding for mobile */
+    font-size: 0.95rem; /* Slightly smaller font */
+    font-weight: bold;
+  }
+}

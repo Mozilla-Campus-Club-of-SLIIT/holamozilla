@@ -34,3 +34,29 @@
     }
   }
 }
+
+/* Mobile-first responsive design for Countdown Timer */
+/* Mobile devices - up to 767px */
+@media (max-width: 767px) {
+  .countdown {
+    flex-wrap: wrap; 
+    gap: 0.8rem; 
+    padding: 1rem; 
+    max-width: 280px; 
+    margin: 0 auto; 
+  }
+  
+  .timeblock {
+    flex: 0 1 calc(50% - 0.4rem); /* Make each block take ~50% width minus gap */
+    min-width: 120px; 
+    max-width: 130px; 
+  }
+  
+  .timeblock .timeblock-value {
+    font-size: 1.6rem; 
+  }
+  
+  .timeblock .timeblock-label {
+    font-size: 0.75rem; 
+  }
+}
