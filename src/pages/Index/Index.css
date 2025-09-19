@@ -93,7 +93,7 @@
 
 
 
-.about {
+.about, h2 {
   color: #fff;
   font-size: 3rem;
   font-weight: 800;
@@ -113,6 +113,18 @@
 p {
   font-size: 1.2rem;
   font-weight: 300;
+}
+
+.agenda-section {
+  position: sticky;
+  min-height: 100vh;
+  top: 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  background: linear-gradient(180deg, #270550 0%, #6A15D2 100%);
+  border-top-right-radius: 420px 120px;
 }
 
 @media (max-width: 767px) {

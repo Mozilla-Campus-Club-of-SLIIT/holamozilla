@@ -4,6 +4,34 @@ import Hero from "../../components/Hero";
 
 import "./Index.css"
 import Ticket from "../../components/Ticket";
+import Timeline from "../../components/Timeline";
+
+const agenda = [
+  {
+    title: "Intro",
+    duration: "10 mins",
+    speakerImage: "/images/Sayuru.jpeg",
+    speakerTitle: "President - Mozilla Campus Club of SLIIT",
+    speakerName: "Sadeesha Perera",
+  },
+  {
+    title: "What is Mozilla",
+    duration: "15 - 30 mins",
+    speakerImage: "/images/Sayuru.jpeg",
+    speakerTitle: "Former President - Mozilla Campus Club of SLIIT & Current President of SLIIT FOSS",
+    speakerName: "Sayuru Rehan"
+  },
+  {
+    title: "DevSecOps 101 session",
+    speakerImage: "/images/Sayuru.jpeg",
+    speakerName: "Kavintha Kulasingham",
+    speakerTitle: "representing Cloud Native Sri Lanka Community"
+  },
+  {
+    title: "Quiz Game",
+    duration: "15 mins",
+  }
+]
 
 export default function Index() {
 
@@ -45,6 +73,11 @@ export default function Index() {
         </p>
         <Carousel />
       </section>
+      <section className="agenda-section">
+        <h2>Agenda</h2>
+        <Timeline events={agenda} />
+      </section>
+
       <section className="tickets">
         <h2 className="ticket-header">Get your ticket now</h2>
         <p>
@@ -53,7 +86,7 @@ export default function Index() {
         {/*<img src="/images/ticket.png" className="ticket-image" />*/}
         <Ticket name={name} />
         <div className="ticket-placer-section">
-          <input type="text" placeholder="Enter your name" ref={nameRef} className={error && "error"}/>
+          <input type="text" placeholder="Enter your name" ref={nameRef} className={error && "error"} />
           <div className="input-error">{error || ""}</div>
           <button onClick={generateTicket}>Grab it!</button>
         </div>
