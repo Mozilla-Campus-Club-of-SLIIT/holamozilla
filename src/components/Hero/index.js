@@ -38,6 +38,7 @@ function Hero() {
             hour12: true
           })}
         </div>
+        <p>See you next year</p>
         <CountdownTimer targetDate={eventDate} />
       </div>
       <div className="hero-bg-shape"></div>
